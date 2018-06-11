@@ -8,7 +8,7 @@ let
 
   sidebarModule = types.submodule ({ config, ...}: {
     options = {
-      enable = mkEnableOption "sidebar support.";
+      enable = mkEnableOption "sidebar support";
 
       width = mkOption {
         type = types.int;
@@ -19,7 +19,7 @@ let
       shortPath = mkOption {
         type = types.bool;
         default = true;
-        description = "Shortened path";
+        description = "By default sidebar shows the full path of the mailbox, but with this enabled only the relative name is shown.";
       };
 
       format = mkOption {
@@ -68,7 +68,7 @@ let
 
   imapModule = types.submodule ({ config, ...}: {
     options = {
-      enable = mkEnableOption "the IMAP support.";
+      enable = mkEnableOption "the IMAP support";
 
       user = mkOption {
         type = types.string;
@@ -99,7 +99,7 @@ let
   });
   smtpModule = types.submodule ({ config, ...}: {
     options = {
-      enable = mkEnableOption "the SMTP support.";
+      enable = mkEnableOption "the SMTP support";
 
       user = mkOption {
         type = types.string;
@@ -128,7 +128,7 @@ in
 {
   options = {
     programs.neomutt = {
-      enable = mkEnableOption "the neomutt mail client.";
+      enable = mkEnableOption "the neomutt mail client";
 
       from = mkOption {
         type = types.string;
@@ -165,7 +165,7 @@ in
       gpg = mkOption {
         type = types.bool;
         default = false;
-        description = "Enable gpg support";
+        description = "Enable gpg support.";
       };
 
       sidebar = mkOption {
@@ -177,7 +177,7 @@ in
       binds = mkOption {
         type = types.listOf bindModule;
         default = [];
-        description = "List of keybindings";
+        description = "List of keybindings.";
       };
 
       macros = mkOption {
@@ -185,7 +185,7 @@ in
         # much the same
         type = types.listOf bindModule;
         default = [];
-        description = "List of macros";
+        description = "List of macros.";
       };
 
       sort = mkOption {
