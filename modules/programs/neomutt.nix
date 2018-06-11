@@ -24,7 +24,7 @@ let
 
       format = mkOption {
         type = types.string;
-        default = "%B%?F? [%]?%* %?N?%N/?%S";
+        default = "%B%?F? [%F]?%* %?N?%N/?%S";
         description = "Sidebar format. Check neomutt documentation for details.";
       };
     };
@@ -97,6 +97,7 @@ let
       };
     };
   });
+
   smtpModule = types.submodule ({ config, ...}: {
     options = {
       enable = mkEnableOption "the SMTP support";
